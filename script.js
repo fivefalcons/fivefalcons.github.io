@@ -16,6 +16,13 @@
     document.head.appendChild(realisticStyles);
   }
 
+  if (isHomepage && !document.querySelector('link[href="trust-strip-fix.css"]')) {
+    const trustStripStyles = document.createElement('link');
+    trustStripStyles.rel = 'stylesheet';
+    trustStripStyles.href = 'trust-strip-fix.css';
+    document.head.appendChild(trustStripStyles);
+  }
+
   if (!document.querySelector('link[href="logo-integration.css"]')) {
     const logoStyles = document.createElement('link');
     logoStyles.rel = 'stylesheet';
