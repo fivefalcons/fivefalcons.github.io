@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 330" role="img" aria-labelledby="title desc">
+  <title id="title">Realistic power-only semi tractor</title>
+  <desc id="desc">A detailed gold sleeper-cab semi tractor shown from the side.</desc>
+  <defs>
+    <linearGradient id="cabPaint" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffe39a"/><stop offset=".4" stop-color="#efc45d"/><stop offset=".72" stop-color="#cf8d18"/><stop offset="1" stop-color="#87520b"/></linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f7fafc"/><stop offset=".45" stop-color="#9eabb8"/><stop offset=".52" stop-color="#edf2f6"/><stop offset="1" stop-color="#657382"/></linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#7fc4e8"/><stop offset=".45" stop-color="#264c6a"/><stop offset="1" stop-color="#0b1c2b"/></linearGradient>
+    <radialGradient id="tire"><stop offset="0" stop-color="#343c45"/><stop offset=".62" stop-color="#111820"/><stop offset="1" stop-color="#05080c"/></radialGradient>
+    <filter id="shadow" x="-20%" y="-40%" width="140%" height="180%"><feGaussianBlur stdDeviation="9"/></filter>
+    <filter id="truckShadow" x="-20%" y="-30%" width="140%" height="180%"><feDropShadow dx="0" dy="9" stdDeviation="8" flood-color="#000" flood-opacity=".3"/></filter>
+  </defs>
+
+  <ellipse cx="326" cy="278" rx="250" ry="23" fill="#07111d" opacity=".25" filter="url(#shadow)"/>
+  <g filter="url(#truckShadow)" class="tractor">
+    <path d="M87 214h307l10-82 28-50h72l51 49 18 83h-41l-8-26H196l-10 26H87Z" fill="url(#cabPaint)" stroke="#70460b" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M402 132 431 82h69l37 42v14H402Z" fill="url(#glass)" stroke="#d7e3ec" stroke-width="3"/>
+    <path d="M431 86v48M499 84v53" stroke="#d7e3ec" stroke-width="3" opacity=".8"/>
+    <path d="M119 119h255l-8 86H117Z" fill="url(#cabPaint)" stroke="#70460b" stroke-width="4"/>
+    <path d="M141 132h174v44H137Z" fill="url(#glass)" stroke="#d7e3ec" stroke-width="3"/>
+    <path d="M226 132v45" stroke="#d7e3ec" stroke-width="3"/>
+    <path d="M337 120h42v91h-42Z" fill="#bd7a12" stroke="#70460b" stroke-width="3"/>
+    <rect x="355" y="141" width="7" height="25" rx="3" fill="#f4dc9a"/>
+    <path d="M516 141h42l8 44h-51Z" fill="#ba7814" opacity=".9"/>
+    <rect x="522" y="162" width="37" height="11" rx="3" fill="#1e2c38"/>
+    <rect x="552" y="181" width="18" height="12" rx="3" fill="#fff0a7"/>
+    <path d="M102 213h470v24H92Z" fill="url(#metal)" stroke="#52606d" stroke-width="3"/>
+    <path d="M95 236h478" stroke="#1b2732" stroke-width="9"/>
+    <rect x="82" y="201" width="31" height="20" rx="4" fill="url(#metal)" stroke="#52606d" stroke-width="3"/>
+    <rect x="368" y="205" width="74" height="31" rx="5" fill="url(#metal)" stroke="#52606d" stroke-width="3"/>
+    <rect x="280" y="211" width="70" height="23" rx="4" fill="#3e4c58"/>
+    <ellipse cx="315" cy="212" rx="31" ry="9" fill="#151d24" stroke="#7f8b96" stroke-width="3"/>
+
+    <g class="stack"><rect x="104" y="64" width="14" height="91" rx="6" fill="url(#metal)" stroke="#52606d" stroke-width="3"/><path d="M105 65h19" stroke="#edf3f7" stroke-width="6" stroke-linecap="round"/></g>
+    <g class="stack"><rect x="376" y="61" width="14" height="86" rx="6" fill="url(#metal)" stroke="#52606d" stroke-width="3"/><path d="M377 62h19" stroke="#edf3f7" stroke-width="6" stroke-linecap="round"/></g>
+    <path d="M410 100h-26l-12-12" fill="none" stroke="url(#metal)" stroke-width="5" stroke-linecap="round"/>
+    <ellipse cx="383" cy="84" rx="13" ry="7" fill="#dbe5ec" stroke="#4b5965" stroke-width="3"/>
+
+    <path d="M126 191h222" stroke="#f8db91" stroke-width="5" opacity=".8"/>
+    <path d="M121 199h224" stroke="#935a0d" stroke-width="2" opacity=".8"/>
+    <circle cx="134" cy="203" r="4" fill="#ffef9b"/><circle cx="202" cy="203" r="4" fill="#ffef9b"/><circle cx="270" cy="203" r="4" fill="#ffef9b"/><circle cx="338" cy="203" r="4" fill="#ffef9b"/>
+
+    <g class="wheel" transform="translate(164 242)"><circle r="43" fill="url(#tire)"/><circle r="25" fill="url(#metal)" stroke="#111820" stroke-width="4"/><circle r="8" fill="#323e49"/><g stroke="#616f7c" stroke-width="3"><path d="M0-21V21M-21 0H21M-15-15 15 15M15-15-15 15"/></g></g>
+    <g class="wheel" transform="translate(425 242)"><circle r="43" fill="url(#tire)"/><circle r="25" fill="url(#metal)" stroke="#111820" stroke-width="4"/><circle r="8" fill="#323e49"/><g stroke="#616f7c" stroke-width="3"><path d="M0-21V21M-21 0H21M-15-15 15 15M15-15-15 15"/></g></g>
+    <g class="wheel" transform="translate(510 242)"><circle r="43" fill="url(#tire)"/><circle r="25" fill="url(#metal)" stroke="#111820" stroke-width="4"/><circle r="8" fill="#323e49"/><g stroke="#616f7c" stroke-width="3"><path d="M0-21V21M-21 0H21M-15-15 15 15M15-15-15 15"/></g></g>
+  </g>
+
+  <g opacity=".5" stroke="#8aa0b2" stroke-width="3" stroke-linecap="round"><path d="M45 277h50"/><path d="M565 277h38"/><path d="M18 294h85"/></g>
+  <style>
+    .tractor{animation:idle 4.2s ease-in-out infinite}.wheel g{transform-origin:center;animation:spin 7s linear infinite}.stack{animation:stack 2.8s ease-in-out infinite}
+    @keyframes idle{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes stack{0%,100%{transform:translateY(0)}50%{transform:translateY(-1px)}}
+    @media(prefers-reduced-motion:reduce){.tractor,.wheel g,.stack{animation:none}}
+  </style>
+</svg>
