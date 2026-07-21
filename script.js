@@ -26,7 +26,7 @@
   document.querySelectorAll('.brand-mark').forEach(function (mark) {
     const logo = document.createElement('img');
     logo.className = 'brand-logo-image';
-    logo.src = 'assets/five-falcons-logo-mark.webp';
+    logo.src = 'assets/five-falcons-logo-mark.svg';
     logo.alt = '';
     logo.decoding = 'async';
     mark.replaceWith(logo);
