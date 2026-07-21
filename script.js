@@ -26,32 +26,17 @@
   document.querySelectorAll('.brand-mark').forEach(function (mark) {
     const logo = document.createElement('img');
     logo.className = 'brand-logo-image';
-    logo.src = 'assets/five-falcons-logo.webp';
+    logo.src = 'assets/five-falcons-logo-mark.svg';
     logo.alt = '';
     logo.decoding = 'async';
     mark.replaceWith(logo);
   });
 
+  document.querySelectorAll('.hero-brand-panel, .logo-watermark').forEach(function (element) {
+    element.remove();
+  });
+
   if (isHomepage) {
-    const heroCopy = document.querySelector('.hero-copy');
-    const availabilityPill = document.querySelector('.availability-pill');
-    if (heroCopy && availabilityPill && !document.querySelector('.hero-brand-panel')) {
-      const brandPanel = document.createElement('div');
-      brandPanel.className = 'hero-brand-panel';
-      brandPanel.innerHTML = '<img src="assets/five-falcons-logo.webp" alt="Five Falcons Express Inc logo" decoding="async"><div><span>Five Falcons Express Inc</span><strong>Power-only OTR transportation</strong><small>MC 1773092 · USDOT 4487040</small><div class="logo-credentials"><span>Illinois carrier</span><span>Lower 48</span></div></div>';
-      heroCopy.insertBefore(brandPanel, availabilityPill);
-    }
-
-    const visualShell = document.querySelector('.visual-shell');
-    if (visualShell && !visualShell.querySelector('.logo-watermark')) {
-      const watermark = document.createElement('img');
-      watermark.className = 'logo-watermark';
-      watermark.src = 'assets/five-falcons-logo.webp';
-      watermark.alt = '';
-      watermark.setAttribute('aria-hidden', 'true');
-      visualShell.appendChild(watermark);
-    }
-
     const routeStage = document.querySelector('.route-stage');
     if (routeStage) {
       const oldRouteMap = routeStage.querySelector('.route-map');
