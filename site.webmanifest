@@ -1,0 +1,18 @@
+{
+  "name": "Five Falcons Express Inc",
+  "short_name": "Five Falcons",
+  "description": "Power-only OTR transportation from Five Falcons Express Inc.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#071426",
+  "theme_color": "#071426",
+  "icons": [
+    {
+      "src": "/assets/five-falcons-emblem.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
