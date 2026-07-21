@@ -53,7 +53,7 @@
     const hookVisual = document.querySelector('.hook-visual');
     if (hookVisual) {
       hookVisual.classList.add('realistic-truck-visual');
-      hookVisual.innerHTML = '<img src="assets/realistic-semi-truck.svg" alt="" loading="lazy" decoding="async">';
+      hookVisual.innerHTML = '<img src="assets/realistic-hookdrop-semi.svg" alt="" loading="lazy" decoding="async">';
     }
   }
 
