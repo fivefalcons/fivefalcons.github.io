@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+  <title id="title">Animated Five Falcons lower 48 route network</title>
+  <desc id="desc">An accurate outline of the contiguous United States with representative animated freight routes and semi trucks.</desc>
+  <defs>
+    <linearGradient id="land" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#173f63"/>
+      <stop offset="1" stop-color="#0f2c49"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f7dfa0"/>
+      <stop offset=".45" stop-color="#f0c55d"/>
+      <stop offset="1" stop-color="#d99b20"/>
+    </linearGradient>
+    <linearGradient id="trailer" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset=".55" stop-color="#cbd5df"/>
+      <stop offset="1" stop-color="#9ba9b7"/>
+    </linearGradient>
+    <linearGradient id="cab" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd878"/>
+      <stop offset=".55" stop-color="#e7b94f"/>
+      <stop offset="1" stop-color="#b97a12"/>
+    </linearGradient>
+    <radialGradient id="pointGlow">
+      <stop offset="0" stop-color="#f0c55d" stop-opacity=".95"/>
+      <stop offset="1" stop-color="#f0c55d" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softShadow" x="-40%" y="-80%" width="180%" height="260%">
+      <feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#000" flood-opacity=".42"/>
+    </filter>
+    <filter id="routeGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <path id="routeA" d="M130 306C248 191 449 279 570 197S705 151 755 189"/>
+    <path id="routeB" d="M138 54C208 102 263 182 334 235S384 333 446 367 560 309 631 339 690 408 717 472"/>
+    <path id="routeC" d="M130 306C262 339 332 329 446 367S586 266 755 189"/>
+  </defs>
+
+  <g opacity=".34">
+    <ellipse cx="445" cy="466" rx="310" ry="22" fill="#020817"/>
+  </g>
+
+  <path d="M 139.3,28.0 L 172.3,37.0 L 207.0,45.4 L 218.6,48.0 L 254.6,55.1 L 289.6,60.8 L 325.4,65.6 L 361.3,69.2 L 402.2,72.0 L 443.3,73.2 L 468.2,73.3 L 468.2,66.4 L 472.3,66.3 L 474.5,76.1 L 478.3,79.0 L 486.8,79.9 L 499.3,82.4 L 511.3,87.5 L 521.0,84.7 L 536.3,88.4 L 540.3,87.9 L 550.8,82.1 L 562.7,87.6 L 575.3,93.3 L 585.9,98.2 L 596.1,102.9 L 597.9,107.4 L 601.0,108.8 L 600.4,110.7 L 603.8,110.8 L 606.0,108.7 L 607.2,112.8 L 610.1,115.4 L 613.5,114.9 L 615.6,116.9 L 614.5,120.2 L 628.7,126.8 L 633.8,142.7 L 638.6,157.9 L 636.4,169.1 L 631.6,179.8 L 629.6,186.5 L 629.5,188.4 L 631.4,190.8 L 636.3,193.0 L 639.6,192.6 L 653.5,180.7 L 666.6,175.6 L 682.1,163.8 L 682.1,161.9 L 679.9,156.7 L 677.2,153.5 L 682.5,149.7 L 695.1,147.2 L 706.8,144.9 L 709.5,137.1 L 710.8,135.4 L 721.4,119.8 L 726.3,115.3 L 745.2,110.7 L 768.0,104.9 L 768.1,100.3 L 771.8,98.3 L 776.3,94.2 L 778.5,85.1 L 778.4,70.6 L 783.8,55.0 L 789.0,58.3 L 796.1,53.0 L 802.9,56.4 L 810.0,79.9 L 821.0,87.2 L 824.9,92.2 L 814.3,104.6 L 803.4,114.4 L 791.6,123.3 L 787.8,135.6 L 786.7,140.1 L 789.1,149.4 L 795.9,157.6 L 801.4,156.5 L 798.2,150.5 L 803.2,153.3 L 803.6,158.6 L 795.6,163.9 L 789.3,165.2 L 780.4,170.8 L 775.0,173.2 L 767.6,176.0 L 757.8,183.7 L 776.4,175.6 L 781.1,178.0 L 764.0,187.9 L 755.5,190.0 L 755.4,187.7 L 752.5,193.6 L 756.6,193.5 L 756.7,206.9 L 750.0,222.8 L 748.0,218.4 L 744.8,218.2 L 739.4,214.7 L 744.3,223.7 L 748.4,226.1 L 750.1,232.8 L 747.2,240.6 L 742.5,256.6 L 741.1,256.1 L 742.8,243.1 L 734.3,237.8 L 729.5,223.3 L 728.5,231.6 L 733.8,242.3 L 724.1,241.4 L 734.8,245.1 L 739.0,262.0 L 743.3,262.3 L 746.1,268.2 L 751.9,285.6 L 745.6,300.7 L 731.7,309.0 L 724.1,321.4 L 717.0,323.9 L 710.8,331.8 L 709.7,338.2 L 695.4,352.6 L 688.3,362.5 L 682.8,374.2 L 682.5,387.3 L 687.1,399.2 L 694.7,413.6 L 703.7,425.1 L 705.0,432.7 L 716.0,451.9 L 717.5,463.9 L 717.9,470.9 L 715.7,482.3 L 711.1,485.3 L 702.7,484.5 L 699.0,477.1 L 692.2,474.0 L 681.3,460.1 L 671.9,447.6 L 668.5,441.0 L 670.1,428.8 L 664.4,419.6 L 650.2,406.3 L 643.8,404.3 L 629.0,414.3 L 626.2,413.8 L 617.7,406.2 L 607.5,402.8 L 590.1,406.8 L 576.2,405.9 L 564.4,408.1 L 558.2,411.3 L 561.3,415.9 L 561.6,423.2 L 565.1,426.5 L 562.3,429.1 L 556.3,426.9 L 550.6,430.6 L 539.1,430.7 L 526.8,421.8 L 513.2,424.6 L 501.7,420.9 L 491.9,422.4 L 478.8,426.8 L 464.5,440.3 L 448.6,448.0 L 439.8,456.5 L 436.0,464.5 L 435.6,476.9 L 436.3,485.4 L 439.4,491.6 L 433.0,492.0 L 421.4,487.8 L 408.8,482.0 L 404.5,473.4 L 401.4,460.8 L 392.3,450.2 L 387.3,439.4 L 379.9,426.7 L 369.3,418.9 L 356.4,418.4 L 345.5,431.9 L 332.8,425.5 L 325.2,419.4 L 322.2,409.2 L 317.9,399.3 L 309.5,390.5 L 302.3,384.0 L 297.4,377.0 L 271.0,373.8 L 270.0,381.2 L 257.9,379.6 L 227.6,375.2 L 195.3,356.7 L 174.4,343.8 L 176.5,340.6 L 157.2,338.6 L 140.1,336.3 L 139.6,326.7 L 132.5,314.3 L 126.2,310.6 L 125.9,305.1 L 118.0,302.3 L 114.0,296.2 L 101.1,291.0 L 98.2,287.2 L 99.0,277.2 L 90.2,255.8 L 85.5,228.2 L 87.2,224.3 L 82.9,216.8 L 76.8,199.1 L 79.2,184.3 L 75.1,172.6 L 82.4,159.1 L 86.5,144.1 L 86.5,129.5 L 96.5,114.7 L 102.8,99.4 L 109.0,84.1 L 113.9,60.4 L 114.6,44.5 L 113.7,35.5 L 116.1,32.6 L 131.2,43.5 L 132.8,61.6 L 137.1,57.9 L 139.2,43.2 L 139.3,28.0 Z" fill="url(#land)" stroke="#6e8aa3" stroke-opacity=".48" stroke-width="2"/>
+
+  <g fill="none" stroke-linecap="round" filter="url(#routeGlow)">
+    <use href="#routeA" stroke="#f0c55d" stroke-opacity=".18" stroke-width="12"/>
+    <use href="#routeB" stroke="#f0c55d" stroke-opacity=".14" stroke-width="10"/>
+    <use href="#routeC" stroke="#8ec8ef" stroke-opacity=".12" stroke-width="9"/>
+    <use href="#routeA" class="route route-a" stroke="url(#gold)" stroke-width="3.2" stroke-dasharray="12 11"/>
+    <use href="#routeB" class="route route-b" stroke="#f0c55d" stroke-width="2.8" stroke-dasharray="9 10"/>
+    <use href="#routeC" class="route route-c" stroke="#9ed8ff" stroke-width="2.4" stroke-dasharray="8 11"/>
+  </g>
+
+  <g class="cities">
+    <g transform="translate(130 306)"><circle r="22" fill="url(#pointGlow)"/><circle r="6" fill="#f0c55d" stroke="#fff" stroke-width="2"/></g>
+    <g transform="translate(138 54)"><circle r="19" fill="url(#pointGlow)"/><circle r="5" fill="#f0c55d" stroke="#fff" stroke-width="2"/></g>
+    <g transform="translate(334 235)"><circle r="18" fill="url(#pointGlow)"/><circle r="5" fill="#f0c55d" stroke="#fff" stroke-width="2"/></g>
+    <g transform="translate(446 367)"><circle r="23" fill="url(#pointGlow)"/><circle r="6" fill="#f0c55d" stroke="#fff" stroke-width="2"/></g>
+    <g transform="translate(570 197)"><circle r="25" fill="url(#pointGlow)"/><circle r="7" fill="#59d59b" stroke="#fff" stroke-width="2"/></g>
+    <g transform="translate(631 339)"><circle r="19" fill="url(#pointGlow)"/><circle r="5" fill="#f0c55d" stroke="#fff" stroke-width="2"/></g>
+    <g transform="translate(755 189)"><circle r="22" fill="url(#pointGlow)"/><circle r="6" fill="#f0c55d" stroke="#fff" stroke-width="2"/></g>
+    <g transform="translate(717 472)"><circle r="18" fill="url(#pointGlow)"/><circle r="5" fill="#f0c55d" stroke="#fff" stroke-width="2"/></g>
+  </g>
+
+  <g filter="url(#softShadow)">
+    <g transform="translate(-42 -16)">
+      <g id="truck-one">
+        <rect x="0" y="6" width="49" height="20" rx="2" fill="url(#trailer)" stroke="#667586" stroke-width="1.2"/>
+        <path d="M49 11h13l8 8v7H49Z" fill="url(#cab)" stroke="#8f6419" stroke-width="1.2"/>
+        <path d="M56 13h6l5 6h-11Z" fill="#19334b" stroke="#d6e1eb" stroke-width=".8"/>
+        <rect x="48" y="22" width="23" height="4" rx="1" fill="#495867"/>
+        <rect x="3" y="9" width="42" height="2" fill="#fff" opacity=".45"/>
+        <circle cx="12" cy="29" r="5.5" fill="#07111d" stroke="#8d99a6" stroke-width="2"/>
+        <circle cx="42" cy="29" r="5.5" fill="#07111d" stroke="#8d99a6" stroke-width="2"/>
+        <circle cx="60" cy="29" r="5.5" fill="#07111d" stroke="#8d99a6" stroke-width="2"/>
+        <circle cx="68" cy="23" r="1.5" fill="#fff3b4"/>
+      </g>
+      <animateMotion dur="12s" repeatCount="indefinite" rotate="auto" keyTimes="0;.48;.54;1" keyPoints="0;.5;.5;1" calcMode="spline" keySplines=".4 0 .2 1;0 0 1 1;.4 0 .2 1">
+        <mpath href="#routeA"/>
+      </animateMotion>
+    </g>
+
+    <g transform="translate(-31 -12) scale(.78)">
+      <rect x="0" y="5" width="43" height="18" rx="2" fill="url(#trailer)" stroke="#667586" stroke-width="1.2"/>
+      <path d="M43 9h13l8 8v6H43Z" fill="#5ab0e8" stroke="#2a6d9b" stroke-width="1.2"/>
+      <path d="M50 11h6l5 6H50Z" fill="#17324a" stroke="#d6e1eb" stroke-width=".8"/>
+      <circle cx="11" cy="26" r="5" fill="#07111d" stroke="#8d99a6" stroke-width="2"/>
+      <circle cx="37" cy="26" r="5" fill="#07111d" stroke="#8d99a6" stroke-width="2"/>
+      <circle cx="55" cy="26" r="5" fill="#07111d" stroke="#8d99a6" stroke-width="2"/>
+      <animateMotion dur="15s" begin="-5s" repeatCount="indefinite" rotate="auto">
+        <mpath href="#routeB"/>
+      </animateMotion>
+    </g>
+  </g>
+
+  <style>
+    .route-a{animation:dashA 3.2s linear infinite}.route-b{animation:dashB 4s linear infinite}.route-c{animation:dashC 4.8s linear infinite}
+    .cities>g{animation:pulse 3s ease-in-out infinite}.cities>g:nth-child(2n){animation-delay:-1.3s}
+    @keyframes dashA{to{stroke-dashoffset:-46}}@keyframes dashB{to{stroke-dashoffset:-38}}@keyframes dashC{to{stroke-dashoffset:-38}}
+    @keyframes pulse{0%,100%{opacity:.72}50%{opacity:1}}
+    @media (prefers-reduced-motion:reduce){.route,.cities>g{animation:none}}
+  </style>
+</svg>

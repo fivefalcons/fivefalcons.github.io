@@ -9,6 +9,54 @@
     document.head.appendChild(visualStyles);
   }
 
+  if (isHomepage && !document.querySelector('link[href="realistic-upgrade.css"]')) {
+    const realisticStyles = document.createElement('link');
+    realisticStyles.rel = 'stylesheet';
+    realisticStyles.href = 'realistic-upgrade.css';
+    document.head.appendChild(realisticStyles);
+  }
+
+  if (isHomepage) {
+    const routeStage = document.querySelector('.route-stage');
+    if (routeStage) {
+      const oldRouteMap = routeStage.querySelector('.route-map');
+      if (oldRouteMap) {
+        const accurateMap = document.createElement('img');
+        accurateMap.className = 'real-route-map';
+        accurateMap.src = 'assets/animated-lower48-network.svg';
+        accurateMap.alt = 'Accurate lower 48 United States map with animated representative freight routes and semi trucks';
+        accurateMap.decoding = 'async';
+        oldRouteMap.replaceWith(accurateMap);
+      }
+    }
+
+    const networkWrap = document.querySelector('.network-map-wrap');
+    if (networkWrap) {
+      const oldNetworkMap = networkWrap.querySelector('.network-map');
+      if (oldNetworkMap) {
+        const networkMap = document.createElement('img');
+        networkMap.className = 'real-network-map';
+        networkMap.src = 'assets/animated-lower48-network.svg';
+        networkMap.alt = 'Accurate contiguous United States service-area map with representative animated freight routes';
+        networkMap.loading = 'lazy';
+        networkMap.decoding = 'async';
+        oldNetworkMap.replaceWith(networkMap);
+      }
+    }
+
+    const powerVisual = document.querySelector('.power-visual');
+    if (powerVisual) {
+      powerVisual.classList.add('realistic-truck-visual');
+      powerVisual.innerHTML = '<img src="assets/realistic-power-only-tractor.svg" alt="" loading="lazy" decoding="async">';
+    }
+
+    const hookVisual = document.querySelector('.hook-visual');
+    if (hookVisual) {
+      hookVisual.classList.add('realistic-truck-visual');
+      hookVisual.innerHTML = '<img src="assets/realistic-hookdrop-semi.svg" alt="" loading="lazy" decoding="async">';
+    }
+  }
+
   const menuButton = document.querySelector('.menu-toggle');
   const navigation = document.querySelector('.primary-nav');
 
