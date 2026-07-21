@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 330" role="img" aria-labelledby="title desc">
+  <title id="title">Realistic hook-and-drop semi truck</title>
+  <desc id="desc">A detailed gold semi tractor connected to a silver dry van trailer.</desc>
+  <defs>
+    <linearGradient id="cabPaint" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffe39a"/><stop offset=".45" stop-color="#efc45d"/><stop offset=".78" stop-color="#c98312"/><stop offset="1" stop-color="#7b4708"/></linearGradient>
+    <linearGradient id="trailerPaint" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fbfdff"/><stop offset=".5" stop-color="#d8e0e7"/><stop offset="1" stop-color="#8997a4"/></linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f7fafc"/><stop offset=".45" stop-color="#9eabb8"/><stop offset=".52" stop-color="#edf2f6"/><stop offset="1" stop-color="#657382"/></linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#87cff0"/><stop offset=".5" stop-color="#2b5673"/><stop offset="1" stop-color="#091b29"/></linearGradient>
+    <radialGradient id="tire"><stop offset="0" stop-color="#343c45"/><stop offset=".65" stop-color="#111820"/><stop offset="1" stop-color="#04070b"/></radialGradient>
+    <filter id="shadow" x="-20%" y="-40%" width="140%" height="180%"><feGaussianBlur stdDeviation="10"/></filter>
+    <filter id="truckShadow" x="-20%" y="-30%" width="140%" height="180%"><feDropShadow dx="0" dy="9" stdDeviation="8" flood-color="#000" flood-opacity=".3"/></filter>
+  </defs>
+
+  <ellipse cx="365" cy="280" rx="315" ry="24" fill="#07111d" opacity=".23" filter="url(#shadow)"/>
+  <g filter="url(#truckShadow)" class="rig">
+    <g class="trailer">
+      <path d="M45 72h414v157H45Z" fill="url(#trailerPaint)" stroke="#5d6975" stroke-width="4"/>
+      <path d="M48 87h408" stroke="#fff" stroke-width="5" opacity=".52"/>
+      <path d="M62 72v157M442 72v157" stroke="#84919d" stroke-width="3"/>
+      <rect x="50" y="202" width="402" height="25" fill="#677481" opacity=".48"/>
+      <rect x="57" y="218" width="70" height="10" rx="3" fill="url(#metal)"/>
+      <rect x="362" y="218" width="84" height="10" rx="3" fill="url(#metal)"/>
+      <rect x="50" y="115" width="7" height="12" fill="#d03232"/><rect x="50" y="171" width="7" height="12" fill="#d03232"/>
+      <path d="M136 112h236" stroke="#afb9c2" stroke-width="2" opacity=".55"/>
+      <path d="M136 127h236" stroke="#afb9c2" stroke-width="2" opacity=".42"/>
+      <path d="M136 142h236" stroke="#afb9c2" stroke-width="2" opacity=".32"/>
+      <g transform="translate(143 240)" class="wheel"><circle r="40" fill="url(#tire)"/><circle r="23" fill="url(#metal)" stroke="#111820" stroke-width="4"/><circle r="7" fill="#313d48"/><g stroke="#667481" stroke-width="3"><path d="M0-20V20M-20 0H20M-14-14 14 14M14-14-14 14"/></g></g>
+      <g transform="translate(219 240)" class="wheel"><circle r="40" fill="url(#tire)"/><circle r="23" fill="url(#metal)" stroke="#111820" stroke-width="4"/><circle r="7" fill="#313d48"/><g stroke="#667481" stroke-width="3"><path d="M0-20V20M-20 0H20M-14-14 14 14M14-14-14 14"/></g></g>
+    </g>
+
+    <g class="tractor">
+      <path d="M431 214h115l9-78 27-52h58l49 50 18 80h-36l-8-24H515l-9 24h-75Z" fill="url(#cabPaint)" stroke="#70460b" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M555 137 582 84h56l35 42v13H555Z" fill="url(#glass)" stroke="#dbe6ee" stroke-width="3"/>
+      <path d="M583 87v47M638 86v50" stroke="#dbe6ee" stroke-width="3" opacity=".8"/>
+      <path d="M454 129h82l-7 76h-78Z" fill="url(#cabPaint)" stroke="#70460b" stroke-width="4"/>
+      <path d="M466 141h57v35h-61Z" fill="url(#glass)" stroke="#dbe6ee" stroke-width="3"/>
+      <rect x="514" y="184" width="8" height="22" rx="3" fill="#f6dd93"/>
+      <path d="M647 149h43l8 42h-50Z" fill="#b97211"/>
+      <rect x="654" y="165" width="35" height="10" rx="3" fill="#1f2d38"/>
+      <rect x="685" y="184" width="16" height="11" rx="3" fill="#fff2a8"/>
+      <path d="M420 213h285v23H416Z" fill="url(#metal)" stroke="#52606d" stroke-width="3"/>
+      <path d="M424 235h279" stroke="#1c2832" stroke-width="9"/>
+      <ellipse cx="456" cy="211" rx="30" ry="8" fill="#151d24" stroke="#7f8b96" stroke-width="3"/>
+      <path d="M450 213h-36v-9h40" fill="none" stroke="#4b5864" stroke-width="7" stroke-linecap="round"/>
+      <rect x="442" y="76" width="13" height="82" rx="6" fill="url(#metal)" stroke="#52606d" stroke-width="3"/>
+      <path d="M442 77h19" stroke="#eef4f8" stroke-width="6" stroke-linecap="round"/>
+      <path d="M563 103h-24l-11-10" fill="none" stroke="url(#metal)" stroke-width="5" stroke-linecap="round"/>
+      <ellipse cx="538" cy="90" rx="12" ry="7" fill="#dbe5ec" stroke="#4b5965" stroke-width="3"/>
+      <circle cx="495" cy="203" r="4" fill="#ffef9b"/><circle cx="526" cy="203" r="4" fill="#ffef9b"/>
+      <g transform="translate(492 242)" class="wheel"><circle r="42" fill="url(#tire)"/><circle r="24" fill="url(#metal)" stroke="#111820" stroke-width="4"/><circle r="8" fill="#323e49"/><g stroke="#667481" stroke-width="3"><path d="M0-21V21M-21 0H21M-15-15 15 15M15-15-15 15"/></g></g>
+      <g transform="translate(615 242)" class="wheel"><circle r="42" fill="url(#tire)"/><circle r="24" fill="url(#metal)" stroke="#111820" stroke-width="4"/><circle r="8" fill="#323e49"/><g stroke="#667481" stroke-width="3"><path d="M0-21V21M-21 0H21M-15-15 15 15M15-15-15 15"/></g></g>
+      <g transform="translate(681 242)" class="wheel"><circle r="42" fill="url(#tire)"/><circle r="24" fill="url(#metal)" stroke="#111820" stroke-width="4"/><circle r="8" fill="#323e49"/><g stroke="#667481" stroke-width="3"><path d="M0-21V21M-21 0H21M-15-15 15 15M15-15-15 15"/></g></g>
+    </g>
+  </g>
+
+  <g class="road" opacity=".5" stroke="#8ca0b2" stroke-width="3" stroke-linecap="round"><path d="M15 281h86"/><path d="M264 281h76"/><path d="M690 281h17"/></g>
+  <style>
+    .rig{animation:idle 4.5s ease-in-out infinite}.wheel g{transform-origin:center;animation:spin 7s linear infinite}.trailer{animation:trailerFlex 4.5s ease-in-out infinite}.road{animation:roadMove 1.2s linear infinite}
+    @keyframes idle{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}@keyframes trailerFlex{0%,100%{transform:rotate(0deg);transform-origin:455px 214px}50%{transform:rotate(.18deg);transform-origin:455px 214px}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes roadMove{to{transform:translateX(-35px)}}
+    @media(prefers-reduced-motion:reduce){.rig,.wheel g,.trailer,.road{animation:none}}
+  </style>
+</svg>
