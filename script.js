@@ -1,49 +1,65 @@
 (function () {
   'use strict';
 
+  const brandAssets = {
+    header: '/assets/five-falcons-header.png',
+    emblem: '/assets/five-falcons-emblem.png',
+    full: '/assets/five-falcons-full.png'
+  };
+
   const isHomepage = document.body && document.querySelector('.hero-grid-overlay');
-  if (isHomepage && !document.querySelector('link[href="visual-upgrade.css"]')) {
-    const visualStyles = document.createElement('link');
-    visualStyles.rel = 'stylesheet';
-    visualStyles.href = 'visual-upgrade.css';
-    document.head.appendChild(visualStyles);
+
+  function ensureStylesheet(href) {
+    if (document.querySelector('link[href="' + href + '"]')) return;
+    const stylesheet = document.createElement('link');
+    stylesheet.rel = 'stylesheet';
+    stylesheet.href = href;
+    document.head.appendChild(stylesheet);
   }
 
-  if (isHomepage && !document.querySelector('link[href="realistic-upgrade.css"]')) {
-    const realisticStyles = document.createElement('link');
-    realisticStyles.rel = 'stylesheet';
-    realisticStyles.href = 'realistic-upgrade.css';
-    document.head.appendChild(realisticStyles);
+  if (isHomepage) {
+    ensureStylesheet('visual-upgrade.css');
+    ensureStylesheet('realistic-upgrade.css');
+    ensureStylesheet('trust-strip-fix.css');
+  }
+  ensureStylesheet('/logo-integration.css');
+
+  function ensureHeadLink(rel, href, type) {
+    let link = document.querySelector('link[rel="' + rel + '"]');
+    if (!link) {
+      link = document.createElement('link');
+      link.rel = rel;
+      document.head.appendChild(link);
+    }
+    link.href = href;
+    if (type) link.type = type;
+    return link;
   }
 
-  if (isHomepage && !document.querySelector('link[href="trust-strip-fix.css"]')) {
-    const trustStripStyles = document.createElement('link');
-    trustStripStyles.rel = 'stylesheet';
-    trustStripStyles.href = 'trust-strip-fix.css';
-    document.head.appendChild(trustStripStyles);
-  }
+  ensureHeadLink('icon', brandAssets.emblem, 'image/png');
+  ensureHeadLink('apple-touch-icon', brandAssets.emblem, 'image/png');
+  ensureHeadLink('manifest', '/site.webmanifest', 'application/manifest+json');
 
-  if (!document.querySelector('link[href="/logo-integration.css"]')) {
-    const logoStyles = document.createElement('link');
-    logoStyles.rel = 'stylesheet';
-    logoStyles.href = '/logo-integration.css';
-    document.head.appendChild(logoStyles);
-  }
-
-  document.querySelectorAll('.brand-mark').forEach(function (mark) {
+  document.querySelectorAll('a.brand').forEach(function (brand) {
     const logo = document.createElement('img');
-    logo.className = 'brand-logo-image';
-    logo.src = '/assets/five-falcons-logo-mark.svg';
-    logo.alt = '';
+    logo.className = 'brand-logo-wide';
+    logo.src = brandAssets.header;
+    logo.alt = 'Five Falcons Express Inc';
     logo.decoding = 'async';
+
+    if (brand.classList.contains('footer-brand')) {
+      logo.classList.add('brand-logo-footer');
+    }
+    if (brand.classList.contains('centered-brand')) {
+      logo.classList.add('brand-logo-centered');
+    }
+
     logo.addEventListener('error', function () {
-      const fallback = document.createElement('span');
-      fallback.className = 'brand-mark';
-      fallback.setAttribute('aria-hidden', 'true');
-      fallback.textContent = '5F';
-      logo.replaceWith(fallback);
+      brand.textContent = 'Five Falcons Express Inc';
+      brand.classList.add('brand-text-fallback');
     }, { once: true });
-    mark.replaceWith(logo);
+
+    brand.replaceChildren(logo);
   });
 
   document.querySelectorAll('.hero-brand-panel, .logo-watermark').forEach(function (element) {
@@ -51,6 +67,19 @@
   });
 
   if (isHomepage) {
+    const visualBrandArea = document.querySelector('.visual-topbar > div:first-child');
+    if (visualBrandArea) {
+      const fullLogo = document.createElement('img');
+      fullLogo.className = 'hero-full-logo';
+      fullLogo.src = brandAssets.full;
+      fullLogo.alt = 'Five Falcons Express Inc logo';
+      fullLogo.decoding = 'async';
+      fullLogo.addEventListener('error', function () {
+        visualBrandArea.innerHTML = '<span class="visual-kicker">Five Falcons network</span><strong>Hook → Move → Drop</strong>';
+      }, { once: true });
+      visualBrandArea.replaceChildren(fullLogo);
+    }
+
     const routeStage = document.querySelector('.route-stage');
     if (routeStage) {
       const oldRouteMap = routeStage.querySelector('.route-map');
