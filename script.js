@@ -1,6 +1,28 @@
 (function () {
   'use strict';
 
+  const isHomepage = document.body && document.querySelector('.hero-grid-overlay');
+  if (isHomepage && !document.querySelector('link[href="visual-upgrade.css"]')) {
+    const visualStyles = document.createElement('link');
+    visualStyles.rel = 'stylesheet';
+    visualStyles.href = 'visual-upgrade.css';
+    document.head.appendChild(visualStyles);
+  }
+
+  if (isHomepage && !document.querySelector('link[href="realistic-upgrade.css"]')) {
+    const realisticStyles = document.createElement('link');
+    realisticStyles.rel = 'stylesheet';
+    realisticStyles.href = 'realistic-upgrade.css';
+    document.head.appendChild(realisticStyles);
+  }
+
+  if (isHomepage && !document.querySelector('link[href="trust-strip-fix.css"]')) {
+    const trustStripStyles = document.createElement('link');
+    trustStripStyles.rel = 'stylesheet';
+    trustStripStyles.href = 'trust-strip-fix.css';
+    document.head.appendChild(trustStripStyles);
+  }
+
   if (!document.querySelector('link[href="/logo-integration.css"]')) {
     const logoStyles = document.createElement('link');
     logoStyles.rel = 'stylesheet';
@@ -14,7 +36,6 @@
     logo.src = '/assets/five-falcons-logo-mark.svg';
     logo.alt = '';
     logo.decoding = 'async';
-
     logo.addEventListener('error', function () {
       const fallback = document.createElement('span');
       fallback.className = 'brand-mark';
@@ -22,18 +43,73 @@
       fallback.textContent = '5F';
       logo.replaceWith(fallback);
     }, { once: true });
-
     mark.replaceWith(logo);
   });
 
+  document.querySelectorAll('.hero-brand-panel, .logo-watermark').forEach(function (element) {
+    element.remove();
+  });
+
+  if (isHomepage) {
+    const routeStage = document.querySelector('.route-stage');
+    if (routeStage) {
+      const oldRouteMap = routeStage.querySelector('.route-map');
+      if (oldRouteMap) {
+        const accurateMap = document.createElement('img');
+        accurateMap.className = 'real-route-map';
+        accurateMap.src = 'assets/animated-lower48-network.svg';
+        accurateMap.alt = 'Accurate lower 48 United States map with animated representative freight routes and semi trucks';
+        accurateMap.decoding = 'async';
+        oldRouteMap.replaceWith(accurateMap);
+      }
+    }
+
+    const networkWrap = document.querySelector('.network-map-wrap');
+    if (networkWrap) {
+      const oldNetworkMap = networkWrap.querySelector('.network-map');
+      if (oldNetworkMap) {
+        const networkMap = document.createElement('img');
+        networkMap.className = 'real-network-map';
+        networkMap.src = 'assets/animated-lower48-network.svg';
+        networkMap.alt = 'Accurate contiguous United States service-area map with representative animated freight routes';
+        networkMap.loading = 'lazy';
+        networkMap.decoding = 'async';
+        oldNetworkMap.replaceWith(networkMap);
+      }
+    }
+
+    const powerVisual = document.querySelector('.power-visual');
+    if (powerVisual) {
+      powerVisual.classList.add('realistic-truck-visual');
+      powerVisual.innerHTML = '<img src="assets/realistic-power-only-tractor.svg" alt="" loading="lazy" decoding="async">';
+    }
+
+    const hookVisual = document.querySelector('.hook-visual');
+    if (hookVisual) {
+      hookVisual.classList.add('realistic-truck-visual');
+      hookVisual.innerHTML = '<img src="assets/realistic-hookdrop-semi.svg" alt="" loading="lazy" decoding="async">';
+    }
+
+    const smsConsentText = document.querySelector('.sms-consent .checkbox-label span');
+    if (smsConsentText) {
+      smsConsentText.textContent = 'I consent to receive informational and conversational SMS messages from Five Falcons Express Inc at the phone number provided, including load updates, pickup and delivery status, appointment information, document requests, and account support. Messaging frequency may vary. Message and data rates may apply. Reply STOP to opt out. Reply HELP for assistance. Consent is not a condition of purchasing goods or services.';
+    }
+
+    const smsDisclosure = document.querySelector('.sms-consent > p:not(.form-error)');
+    if (smsDisclosure) {
+      smsDisclosure.innerHTML = 'SMS consent is optional and unchecked by default. See our <a href="/privacy-policy/">Privacy Policy</a> and <a href="/terms-and-conditions/">Terms &amp; Conditions</a>.';
+    }
+
+    document.querySelectorAll('a[href="privacy-policy.html"]').forEach(function (link) {
+      link.href = '/privacy-policy/';
+    });
+    document.querySelectorAll('a[href="sms-terms.html"]').forEach(function (link) {
+      link.href = '/terms-and-conditions/';
+    });
+  }
+
   const menuButton = document.querySelector('.menu-toggle');
   const navigation = document.querySelector('.primary-nav');
-
-  function closeMenu() {
-    if (!menuButton || !navigation) return;
-    navigation.classList.remove('is-open');
-    menuButton.setAttribute('aria-expanded', 'false');
-  }
 
   if (menuButton && navigation) {
     menuButton.addEventListener('click', function () {
@@ -42,11 +118,10 @@
     });
 
     navigation.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', closeMenu);
-    });
-
-    document.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape') closeMenu();
+      link.addEventListener('click', function () {
+        navigation.classList.remove('is-open');
+        menuButton.setAttribute('aria-expanded', 'false');
+      });
     });
   }
 
@@ -65,10 +140,10 @@
           activeObserver.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.12, rootMargin: '0px 0px -45px 0px' });
 
     revealItems.forEach(function (item, index) {
-      item.style.transitionDelay = String(Math.min(index % 4, 3) * 70) + 'ms';
+      item.style.transitionDelay = String(Math.min(index % 4, 3) * 80) + 'ms';
       observer.observe(item);
     });
   } else {
