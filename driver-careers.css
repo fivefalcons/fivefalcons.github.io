@@ -1,0 +1,227 @@
+/* Driver opportunities extension — keeps the core freight site intact. */
+.driver-hero-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 18px;
+  color: #d9e7f3;
+  font-size: .92rem;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.driver-hero-link svg {
+  width: 19px;
+  height: 19px;
+  fill: none;
+  stroke: #42c1de;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.driver-hero-link span { color: #42c1de; }
+.driver-hero-link:hover { color: #fff; }
+
+.driver-careers-section {
+  position: relative;
+  overflow: hidden;
+  padding: 104px 0;
+  color: #eaf3fa;
+  background:
+    radial-gradient(circle at 14% 10%, rgba(66, 193, 222, .18), transparent 30%),
+    radial-gradient(circle at 88% 86%, rgba(240, 197, 93, .13), transparent 28%),
+    linear-gradient(145deg, #061326 0%, #0a213b 56%, #07182d 100%);
+}
+
+.driver-careers-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .18;
+  background-image:
+    linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to bottom, transparent, #000 22%, #000 78%, transparent);
+}
+
+.driver-careers-inner { position: relative; z-index: 1; }
+
+.driver-careers-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(300px, .9fr);
+  gap: 58px;
+  align-items: end;
+  margin-bottom: 44px;
+}
+
+.driver-careers-heading .eyebrow { color: #6ed8ec; }
+
+.driver-careers-heading h2 {
+  max-width: 740px;
+  margin-bottom: 0;
+  color: #fff;
+  font-size: clamp(2.35rem, 5vw, 4.5rem);
+  line-height: .98;
+}
+
+.driver-careers-heading h2 em { color: #f0c55d; font-style: normal; }
+
+.driver-careers-heading p {
+  margin: 0;
+  color: #b9ccdc;
+  font-size: 1.04rem;
+  line-height: 1.8;
+}
+
+.driver-benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.driver-benefit-card {
+  min-height: 245px;
+  padding: 28px;
+  border: 1px solid rgba(255,255,255,.11);
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(255,255,255,.085), rgba(255,255,255,.035));
+  box-shadow: 0 22px 48px rgba(0,0,0,.16);
+  backdrop-filter: blur(12px);
+  transition: transform .25s ease, border-color .25s ease, background .25s ease;
+}
+
+.driver-benefit-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(66,193,222,.42);
+  background: linear-gradient(180deg, rgba(255,255,255,.11), rgba(255,255,255,.045));
+}
+
+.driver-benefit-icon {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 25px;
+  place-items: center;
+  border: 1px solid rgba(66,193,222,.28);
+  border-radius: 16px;
+  color: #69d7eb;
+  background: rgba(66,193,222,.1);
+}
+
+.driver-benefit-icon svg {
+  width: 26px;
+  height: 26px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.driver-benefit-card h3 { margin: 0 0 11px; color: #fff; font-size: 1.18rem; }
+.driver-benefit-card p { margin: 0; color: #b8cbdc; line-height: 1.7; }
+
+.driver-application-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, .54fr);
+  gap: 30px;
+  align-items: center;
+  padding: 34px;
+  border: 1px solid rgba(240,197,93,.25);
+  border-radius: 26px;
+  background: linear-gradient(120deg, rgba(240,197,93,.105), rgba(255,255,255,.035));
+}
+
+.driver-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.driver-steps li { position: relative; padding-left: 45px; }
+
+.driver-step-number {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border-radius: 50%;
+  color: #061326;
+  background: #f0c55d;
+  font-size: .76rem;
+  font-weight: 900;
+}
+
+.driver-steps strong { display: block; margin-bottom: 5px; color: #fff; }
+.driver-steps span { color: #b8cbdc; font-size: .88rem; line-height: 1.55; }
+
+.driver-apply-box {
+  padding-left: 28px;
+  border-left: 1px solid rgba(255,255,255,.13);
+}
+
+.driver-apply-box p {
+  margin: 0 0 17px;
+  color: #c4d3df;
+  font-size: .9rem;
+  line-height: 1.6;
+}
+
+.driver-apply-box .button { width: 100%; justify-content: center; }
+
+.driver-disclaimer {
+  margin: 20px 0 0;
+  color: #829aaf;
+  font-size: .78rem;
+  line-height: 1.55;
+}
+
+.primary-nav .careers-nav-link { position: relative; }
+
+.primary-nav .careers-nav-link::after {
+  content: "Hiring";
+  position: absolute;
+  top: -15px;
+  right: -18px;
+  padding: 2px 6px;
+  border-radius: 999px;
+  color: #061326;
+  background: #f0c55d;
+  font-size: .52rem;
+  font-weight: 900;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 960px) {
+  .driver-careers-heading,
+  .driver-application-panel { grid-template-columns: 1fr; }
+  .driver-benefit-grid { grid-template-columns: 1fr 1fr; }
+  .driver-benefit-card:last-child { grid-column: 1 / -1; }
+  .driver-apply-box {
+    padding: 24px 0 0;
+    border-top: 1px solid rgba(255,255,255,.13);
+    border-left: 0;
+  }
+}
+
+@media (max-width: 680px) {
+  .driver-careers-section { padding: 76px 0; }
+  .driver-careers-heading { gap: 22px; margin-bottom: 30px; }
+  .driver-benefit-grid,
+  .driver-steps { grid-template-columns: 1fr; }
+  .driver-benefit-card,
+  .driver-benefit-card:last-child { min-height: auto; grid-column: auto; }
+  .driver-application-panel { padding: 24px 20px; }
+  .primary-nav .careers-nav-link::after { position: static; margin-left: 8px; }
+}
