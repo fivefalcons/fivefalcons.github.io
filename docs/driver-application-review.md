@@ -2,7 +2,7 @@
 
 Review date: November 16, 2026. Draft for implementation and review by transportation/employment counsel; not a determination that either driver category qualifies as an independent contractor.
 
-## Current delivery
+## Original draft review (superseded by implementation update below)
 
 `careers.html` advertises company-truck and owner-operator opportunities. `apply.html` is a disabled, clearly labeled review draft with no submission endpoint. No applicant information, signatures or sample scans are included in this repository. Do not enable fields until a secure intake/signature provider and production validation are implemented.
 
@@ -61,3 +61,9 @@ Before release, confirm mileage calculation (loaded/empty; practical/actual/othe
 - USPS mail-haul compensation: https://www.dol.gov/agencies/whd/fact-sheets/67c-application-SCA-USPS
 - Illinois pay transparency: https://labor.illinois.gov/faqs/equal-pay-act-salary-transparency-faq.html
 - Illinois initial criminal inquiries: https://labor.illinois.gov/laws-rules/fls/job-opportunities-for-qualified-applicants-act.html
+
+## Implementation update
+
+The live hiring page links to https://five-falcons-driver-applications.willie-mccli-4907.chatgpt.site. The application portal uses Sites-authenticated accounts, server-side authorization, AES-GCM encrypted R2 storage, server validation, immutable signed snapshots, timestamps, consent evidence and downloadable HTML copies (printable to PDF). The reviewer inbox is restricted to the configured owner account. No email notifications are configured. The static apply.html now redirects to the portal. The portal is maintained in its own managed source repository; no applicant data is stored in this public repository.
+
+Classification, final pay terms and separate screening/onboarding obligations remain operational responsibilities. Online qualification collection does not settle those matters.
