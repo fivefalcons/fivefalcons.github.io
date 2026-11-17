@@ -7,7 +7,7 @@
     full: '/assets/five-falcons-full.png'
   };
 
-  const isHomepage = document.body && document.querySelector('.hero-grid-overlay');
+  const isHomepage = document.body && document.body.classList.contains('home');
 
   function ensureStylesheet(href) {
     if (document.querySelector('link[href="' + href + '"]')) return;
@@ -17,12 +17,7 @@
     document.head.appendChild(stylesheet);
   }
 
-  if (isHomepage) {
-    ensureStylesheet('visual-upgrade.css');
-    ensureStylesheet('realistic-upgrade.css');
-    ensureStylesheet('trust-strip-fix.css');
-  }
-  ensureStylesheet('/logo-integration.css');
+  if (!isHomepage) ensureStylesheet('/logo-integration.css');
 
   function ensureHeadLink(rel, href, type) {
     let link = document.querySelector('link[rel="' + rel + '"]');
@@ -40,7 +35,7 @@
   ensureHeadLink('apple-touch-icon', brandAssets.emblem, 'image/png');
   ensureHeadLink('manifest', '/site.webmanifest', 'application/manifest+json');
 
-  document.querySelectorAll('a.brand').forEach(function (brand) {
+  document.querySelectorAll('body:not(.home) a.brand').forEach(function (brand) {
     const logo = document.createElement('img');
     logo.className = 'brand-logo-wide';
     logo.src = brandAssets.header;
@@ -66,77 +61,6 @@
     element.remove();
   });
 
-  if (isHomepage) {
-    const visualBrandArea = document.querySelector('.visual-topbar > div:first-child');
-    if (visualBrandArea) {
-      const fullLogo = document.createElement('img');
-      fullLogo.className = 'hero-full-logo';
-      fullLogo.src = brandAssets.full;
-      fullLogo.alt = 'Five Falcons Express Inc logo';
-      fullLogo.decoding = 'async';
-      fullLogo.addEventListener('error', function () {
-        visualBrandArea.innerHTML = '<span class="visual-kicker">Five Falcons network</span><strong>Hook → Move → Drop</strong>';
-      }, { once: true });
-      visualBrandArea.replaceChildren(fullLogo);
-    }
-
-    const routeStage = document.querySelector('.route-stage');
-    if (routeStage) {
-      const oldRouteMap = routeStage.querySelector('.route-map');
-      if (oldRouteMap) {
-        const accurateMap = document.createElement('img');
-        accurateMap.className = 'real-route-map';
-        accurateMap.src = 'assets/animated-lower48-network.svg';
-        accurateMap.alt = 'Accurate lower 48 United States map with animated representative freight routes and semi trucks';
-        accurateMap.decoding = 'async';
-        oldRouteMap.replaceWith(accurateMap);
-      }
-    }
-
-    const networkWrap = document.querySelector('.network-map-wrap');
-    if (networkWrap) {
-      const oldNetworkMap = networkWrap.querySelector('.network-map');
-      if (oldNetworkMap) {
-        const networkMap = document.createElement('img');
-        networkMap.className = 'real-network-map';
-        networkMap.src = 'assets/animated-lower48-network.svg';
-        networkMap.alt = 'Accurate contiguous United States service-area map with representative animated freight routes';
-        networkMap.loading = 'lazy';
-        networkMap.decoding = 'async';
-        oldNetworkMap.replaceWith(networkMap);
-      }
-    }
-
-    const powerVisual = document.querySelector('.power-visual');
-    if (powerVisual) {
-      powerVisual.classList.add('realistic-truck-visual');
-      powerVisual.innerHTML = '<img src="assets/realistic-power-only-tractor.svg" alt="" loading="lazy" decoding="async">';
-    }
-
-    const hookVisual = document.querySelector('.hook-visual');
-    if (hookVisual) {
-      hookVisual.classList.add('realistic-truck-visual');
-      hookVisual.innerHTML = '<img src="assets/realistic-hookdrop-semi.svg" alt="" loading="lazy" decoding="async">';
-    }
-
-    const smsConsentText = document.querySelector('.sms-consent .checkbox-label span');
-    if (smsConsentText) {
-      smsConsentText.textContent = 'I consent to receive informational and conversational SMS messages from Five Falcons Express Inc at the phone number provided, including load updates, pickup and delivery status, appointment information, document requests, and account support. Messaging frequency may vary. Message and data rates may apply. Reply STOP to opt out. Reply HELP for assistance. Consent is not a condition of purchasing goods or services.';
-    }
-
-    const smsDisclosure = document.querySelector('.sms-consent > p:not(.form-error)');
-    if (smsDisclosure) {
-      smsDisclosure.innerHTML = 'SMS consent is optional and unchecked by default. See our <a href="/privacy-policy/">Privacy Policy</a> and <a href="/terms-and-conditions/">Terms &amp; Conditions</a>.';
-    }
-
-    document.querySelectorAll('a[href="privacy-policy.html"]').forEach(function (link) {
-      link.href = '/privacy-policy/';
-    });
-    document.querySelectorAll('a[href="sms-terms.html"]').forEach(function (link) {
-      link.href = '/terms-and-conditions/';
-    });
-  }
-
   const menuButton = document.querySelector('.menu-toggle');
   const navigation = document.querySelector('.primary-nav');
 
@@ -144,6 +68,14 @@
     menuButton.addEventListener('click', function () {
       const isOpen = navigation.classList.toggle('is-open');
       menuButton.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && navigation.classList.contains('is-open')) {
+        navigation.classList.remove('is-open');
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.focus();
+      }
     });
 
     navigation.querySelectorAll('a').forEach(function (link) {
